@@ -16,6 +16,14 @@ public class RandomlyRoguelike {
         System.out.println(Enemy_1.getCharName() + " has " + Enemy_1.getCharHealth() + " health left!");
         gameFunctionality.flashCharacter(Enemy_1.getCharComponent());
     }
+    
+     public static void passHitLandedToForm2() {
+        Player.setCharHealth(gameFunctionality.hitLanded(Enemy_1.getCharComponent(), Player.getCharComponent(), Enemy_1.getCharName(), Player.getCharName(), Enemy_1.getCharHealth(), Player.getCharHealth()));
+
+        System.out.println(Player.getCharName() + " has " + Player.getCharHealth() + " health left!");
+        System.out.println(Enemy_1.getCharName() + " has " + Enemy_1.getCharHealth() + " health left!");
+        gameFunctionality.flashCharacter(Player.getCharComponent());
+    }
 
     public static void main(String[] args) {
         boot.show();
